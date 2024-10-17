@@ -1,1 +1,3 @@
-touch nixpacks.toml
+# nixpacks.toml
+[build]
+command = "npm install --prefix server && npm run build --prefix client"
