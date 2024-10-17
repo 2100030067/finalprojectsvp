@@ -1,3 +1,10 @@
 # nixpacks.toml
+
 [build]
-command = "npm install --prefix server && npm run build --prefix client"
+  commands = [
+    "npm install --prefix server",    # Install server dependencies
+    "npm run build --prefix client"    # Build the React client
+  ]
+
+[serve]
+  command = "npm start --prefix server"  # Start the server
