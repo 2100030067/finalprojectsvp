@@ -21,7 +21,7 @@ const BillForm = () => {
 
   const fetchBills = async () => {
     try {
-      const response = await axios.get('http://localhost:5001/api/bills'); // Fetch all bills
+      const response = await axios.get('https://svpd2024.onrender.com/api/bills'); // Fetch all bills
       setBills(response.data);
     } catch (err) {
       console.error('Error fetching bills:', err);
@@ -38,7 +38,7 @@ const BillForm = () => {
     try {
       // Clear any previous error messages
       setError('');
-      await axios.post('http://localhost:5001/api/bills', billData); // Ensure the correct server port
+      await axios.post('https://svpd2024.onrender.com/api/bills', billData); // Ensure the correct server port
       alert('Bill saved successfully');
       // Clear form after submission
       setId('');
